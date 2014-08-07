@@ -4,8 +4,9 @@ namespace eleiva\noty;
 
 use yii\helpers\Html;
 use yii\helpers\Json;
+use yii\base\Widget;
 
-class Noty extends \yii\base\Widget
+class Noty extends Widget
 {
     /* Html options for the enclosing element */
     public $options = [];
