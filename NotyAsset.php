@@ -15,6 +15,5 @@ class NotyAsset extends AssetBundle{
         $this->sourcePath = __DIR__. DIRECTORY_SEPARATOR . 'assets';
         $this->js[] = YII_DEBUG ? 'jquery.noty.js' : 'jquery.noty.min.js';
         $this->js[] = 'noty.bootstrap.js';
-        $this->css[] = 'noty.css';
     }
 }

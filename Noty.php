@@ -27,14 +27,11 @@ class Noty extends Widget
         ]);
         $asset->register($view);
 
-        echo Html::beginTag($this->tag,$this->options);
-
-        $view->registerJs("var n = noty({text: 'noty - a jquery notification library!'});");
+        $opts = !empty($this->clientOptions) ? Json::encode($this->clientOptions) : "{}";
+        $view->registerJs("noty($opts);");
     }
 
     public function run()
     {
-        echo Html::endTag($this->tag);
-        return "Hello!";
     }
 }
