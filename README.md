@@ -30,13 +30,13 @@ Once the extension is installed, simply use it in your code by  :
 ```php
   use eleiva\noty\Noty;
   echo Noty::widget([                                                                                                                         
-           ‘clientOptions’ => [
-               ‘type’ => ‘information’,
-               ‘timeout’ => 1000,
-               ‘layout’ => ‘topRight’,
-               ‘text’ => ‘Hellooooooooo’,
-               ‘dismissQueue’ => true,
-               ‘theme’ => ‘defaultTheme’ ,
+           'clientOptions' => [
+               'type’ => 'information',
+               'timeout' => 1000,
+               'layout' => 'topRight',
+               'text' => 'Hellooooooooo',
+               'dismissQueue' => true,
+               'theme' => 'defaultTheme' ,
            ]
        ]);
 
