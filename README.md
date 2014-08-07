@@ -29,7 +29,7 @@ Once the extension is installed, simply use it in your code by  :
 
 ```php
   use eleiva\noty\Noty;
-  echo Noty::widget([                                                                                                                         
+  echo Noty::widget([
            'clientOptions' => [
                'type' => 'information',
                'timeout' => 1000,
@@ -45,5 +45,5 @@ Or simply
      echo Noty::widget([
                 “text”=> “Helloo WORLD“,
               ]);
-
+```
 
