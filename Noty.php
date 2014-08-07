@@ -20,7 +20,7 @@ class Noty extends Widget
 
     public function init(){
         $view = $this->getView();
-        $asset = new NotyAssets([
+        $asset = new NotyAsset([
             'publishOptions' => [
                 'forceCopy' => true
             ]
