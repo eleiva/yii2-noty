@@ -42,7 +42,8 @@ Once the extension is installed, simply use it in your code by  :
 ```
 Or simply 
 ```php
-     echo Noty::widget([
+   use eleiva\noty\Noty;
+   echo Noty::widget([
                 'text'=> 'Helloo WORLD',
               ]);
 ```
