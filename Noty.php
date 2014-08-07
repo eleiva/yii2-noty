@@ -12,11 +12,18 @@ class Noty extends Widget
     public $options = [];
 
     /* Client options for noty.js */
-    public $clientOptions = [];
+    public $clientOptions = [
+               'type' => 'information',
+               'timeout' => 1000,
+               'layout' => 'topRight',
+               'dismissQueue' => true,
+               'theme' => 'defaultTheme' ,
+           ];
 
     /* Tag of the surrounding element */
     public $tag = 'div';
 
+    public $text = '';
 
     public function init(){
         $view = $this->getView();
@@ -26,6 +33,7 @@ class Noty extends Widget
             ]
         ]);
         $asset->register($view);
+        $this->clientOptions['text'] = $this->text;
 
         $opts = !empty($this->clientOptions) ? Json::encode($this->clientOptions) : "{}";
         $view->registerJs("noty($opts);");
