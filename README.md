@@ -1,6 +1,6 @@
 README
 ======
-Wrapper of jquery plugin noty
+Wrapper of jquery plugin noty ( http://ned.im/noty/ )
 
 Installation
 ------------
