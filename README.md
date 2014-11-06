@@ -31,8 +31,8 @@ Once the extension is installed, simply use it in your code by  :
   use eleiva\noty\Noty;
   echo Noty::widget([
            'text' => 'Hellooooooooo',
+           'type' => 'error',
            'clientOptions' => [
-               'type' => 'information',
                'timeout' => 1000,
                'layout' => 'topRight',
                'dismissQueue' => true,
