@@ -1,18 +1,22 @@
 {
-	"name": "eleiva/yii2-noty",
-	"description": "Wrapper of jquery plugin noty",
-	"type": "yii2-extension",
-	"keywords": ["yii2","extension","notification"," notify","jquery"],
-	"license": "MIT",
-	"authors": [
-		{
-			"name": "Eduardo Leiva",
-			"email": "eleiva@gmail.com"
-		}
-	],
-	"autoload": {
-		"psr-4": {
-			"eleiva\\noty\\": ""
-		}
-	}
+    "name": "eleiva/yii2-noty",
+    "description": "Wrapper of jquery plugin noty",
+    "type": "yii2-extension",
+    "keywords": ["yii2", "extension", "notification", " notify", "jquery"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Eduardo Leiva",
+            "email": "eleiva@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*",
+        "bower-asset/noty": "2.3.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "eleiva\\noty\\": ""
+        }
+    }
 }
