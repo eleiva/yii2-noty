@@ -5,41 +5,62 @@ namespace eleiva\noty;
 use yii\helpers\Json;
 use yii\base\Widget;
 
-class Noty extends Widget
-{
-    /* Html options for the enclosing element */
-    public $options = [];
+/**
+ * Noty Notification Wrapper @see http://ned.im/
+ */
+class Noty extends Widget {
 
-    /* Client options for noty.js */
+    /**
+     * Notification message 
+     * @var string
+     */
+    public $text;
+
+    /**
+     * Notification type
+     * @var string
+     */
+    public $type = self::ALERT;
+
+    /**
+     * Other Noty options.
+     * @var array
+     */
     public $clientOptions = [
-               'timeout' => 1000,
-               'layout' => 'topRight',
-               'dismissQueue' => true,
-               'theme' => 'defaultTheme' ,
-           ];
+        'timeout' => 1000,
+        'layout' => 'topRight',
+        'dismissQueue' => true,
+        'theme' => 'defaultTheme',
+    ];
 
-    /* Tag of the surrounding element */
-    public $tag = 'div';
+    /**
+     * If to register Animate.css @see https://github.com/daneden/animate.css
+     * @var boolean
+     */
+    public $useAnimateCss = false;
 
-    public $text = '';
-    public $type = 'information';
+    const ALERT = 'alert';
+    const SUCCESS = 'success';
+    const ERROR = 'error';
+    const WARNING = 'warning';
+    const INFORMATION = 'information';
 
-    public function init(){
+    /**
+     * Init widget
+     */
+    public function init() {
         $view = $this->getView();
-        $asset = new NotyAsset([
-            'publishOptions' => [
-                'forceCopy' => true
-            ]
-        ]);
+        $asset = new NotyAsset();
         $asset->register($view);
+        if ($this->useAnimateCss) {
+            $cssAsset = new AnimateAsset();
+            $cssAsset->register($view);
+        }
+
         $this->clientOptions['text'] = $this->text;
         $this->clientOptions['type'] = $this->type;
-
         $opts = !empty($this->clientOptions) ? Json::encode($this->clientOptions) : "{}";
         $view->registerJs("noty($opts);");
     }
 
-    public function run()
-    {
-    }
 }
