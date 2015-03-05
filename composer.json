@@ -8,6 +8,10 @@
         {
             "name": "Eduardo Leiva",
             "email": "eleiva@gmail.com"
+        },
+        {
+            "name": "Victor Demin",
+            "email": "demin@trabeja.com"
         }
     ],
     "require": {
