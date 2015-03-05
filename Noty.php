@@ -7,6 +7,9 @@ use yii\base\Widget;
 
 /**
  * Noty Notification Wrapper @see http://ned.im/
+ * 
+ * @author Eduardo Leiva
+ * @author Victor Demin <demin@trabeja.com>
  */
 class Noty extends Widget {
 
