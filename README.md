@@ -29,16 +29,23 @@ Once the extension is installed, simply use it in your code by  :
 
 ```php
   use eleiva\noty\Noty;
-  echo Noty::widget([
-           'text' => 'Hellooooooooo',
-           'type' => 'error',
-           'clientOptions' => [
-               'timeout' => 1000,
-               'layout' => 'topRight',
-               'dismissQueue' => true,
-               'theme' => 'defaultTheme' ,
-           ]
-       ]);
+   echo Noty::widget([
+        'text' => 'Hi! Looks good!',
+        'type' => Noty::INFORMATION,
+        'useAnimateCss' => true,
+        'clientOptions' => [
+            'timeout' => 5000,
+            'layout' => 'top',
+            'dismissQueue' => true,
+            'theme' => 'relax',
+            'animation' => [
+                'open' => 'animated bounceInLeft',
+                'close' => 'animated bounceOutLeft',
+                'easing' => 'swing',
+                'speed' => 500
+            ]
+        ]
+    ]);
 ```
 Or simply 
 ```php
