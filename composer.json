@@ -17,7 +17,7 @@
     "require": {
         "yiisoft/yii2": "*",
         "bower-asset/noty": "2.3.4",
-        "bower-asset/animate.css": "3.2.3"
+        "bower-asset/animate.css": "3.*"
     },
     "autoload": {
         "psr-4": {
